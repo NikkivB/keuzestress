@@ -5,7 +5,12 @@ if(isset($_POST['makeChoice'])) {
         $_POST['choice2']
     );
 
-    $finalChoice = $choices[rand(0,1)];
+    makeAChoice($choices);
+    echo "<br> <a href='/index.html\'>Ga terug</a>";
+}
 
-    echo $finalChoice;
+function makeAChoice($keuzes) {
+    $finalChoice = $keuzes[rand(0,1)];
+
+    echo "<h1>Uw keuze is: " . $finalChoice . "</h1>";
 }
